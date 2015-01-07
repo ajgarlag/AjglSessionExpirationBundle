@@ -21,7 +21,6 @@ class SessionExpirationTest extends WebTestCase
     {
 
         $client = $this->createClient(array('test_case' => 'SessionExpiration', 'root_config' => 'config.yml'));
-        $client->request('GET', '/login');
         $form = $client->request('GET', '/login')->selectButton('login')->form();
         $form['_username'] = 'antonio';
         $form['_password'] = 'secret';
