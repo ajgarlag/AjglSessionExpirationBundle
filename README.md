@@ -1,7 +1,7 @@
 AjglSessionExpirationBundle
 ===========================
 
-This bundles integrates the [AjglSessionExpirationBundle](https://github.com/ajgarlag/AjglSessionExpirationBundle) library into Symfony.
+This bundles integrates the [AjglSessionExpiration](https://github.com/ajgarlag/AjglSessionExpiration) library into Symfony.
 
 
 Documentation
