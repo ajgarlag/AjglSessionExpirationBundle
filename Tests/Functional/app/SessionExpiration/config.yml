@@ -31,5 +31,5 @@ security:
 ajgl_session_expiration:
     firewalls:
         default:
-            max_idle_time: 1
+            max_idle_time: 2
             expiration_url: /expired
