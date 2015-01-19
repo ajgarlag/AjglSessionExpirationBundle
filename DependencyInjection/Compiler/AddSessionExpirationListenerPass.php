@@ -22,10 +22,10 @@ class AddSessionExpirationListenerPass implements CompilerPassInterface
 {
     public function process(ContainerBuilder $container)
     {
-        foreach ($container->getParameter('ajgl.security.authentication.sessionexpiration_firewalls') as $firewall) {
+        foreach ($container->getParameter('ajgl.security.authentication.session_expiration_firewalls') as $firewall) {
             $definition = $container->findDefinition('security.firewall.map.context.' . $firewall);
             $listeners = $definition->getArgument(0);
-            $listeners[] = new Reference('ajgl.security.authentication.sessionexpiration_listener.' . $firewall);
+            $listeners[] = new Reference('ajgl.security.authentication.session_expiration_listener.' . $firewall);
             $definition->replaceArgument(0, $listeners);
         }
     }
