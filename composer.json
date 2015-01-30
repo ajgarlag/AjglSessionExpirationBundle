@@ -15,7 +15,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Ajgl\\Bundle\\SessionExpirationBundle\\": ""
+            "Ajgl\\Bundle\\SessionExpirationBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ajgl\\Bundle\\SessionExpirationBundle\\Tests\\": "tests/"
         }
     },
     "require": {
