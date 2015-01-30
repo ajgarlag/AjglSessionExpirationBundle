@@ -29,9 +29,9 @@ class ConfigurationTest extends AbstractConfigurationTestCase
                     'firewalls' => array(
                         'default' => array(
                             'max_idle_time' => 0,
-                        )
-                    )
-                )
+                        ),
+                    ),
+                ),
             )
         );
 
@@ -42,12 +42,11 @@ class ConfigurationTest extends AbstractConfigurationTestCase
                         'default' => array(
                             'max_idle_time' => null,
                             'expiration_url' => '/lala',
-                        )
-                    )
-                )
+                        ),
+                    ),
+                ),
             )
         );
-
     }
 
     public function testDefaultProcessedValues()
@@ -56,17 +55,17 @@ class ConfigurationTest extends AbstractConfigurationTestCase
             array(
                 array(
                     'firewalls' => array(
-                        'default' => array()
-                    )
-                )
+                        'default' => array(),
+                    ),
+                ),
             ),
             array(
                 'firewalls' => array(
                     'default' => array(
                         'max_idle_time' => ini_get('session.gc_maxlifetime'),
                         'expiration_url' => null,
-                    )
-                )
+                    ),
+                ),
             )
         );
     }

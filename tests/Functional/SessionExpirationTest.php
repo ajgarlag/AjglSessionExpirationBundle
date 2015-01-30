@@ -19,7 +19,6 @@ class SessionExpirationTest extends WebTestCase
 
     public function testExpiredExceptionRedirectsToTargetUrl()
     {
-
         $client = $this->createClient(array('test_case' => 'SessionExpiration', 'root_config' => 'config.yml'));
         $form = $client->request('GET', '/login')->selectButton('login')->form();
         $form['_username'] = 'antonio';

@@ -29,14 +29,13 @@ class AjglSessionExpirationExtension extends Extension
         $config = $this->processConfiguration($configuration, $configs);
 
         if (isset($config['firewalls'])) {
-
             $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
             $loader->load('security_listener.xml');
 
             $firewalls = array();
 
             foreach ($config['firewalls'] as $name => $sessionExpirationConfig) {
-                $sessionExpirationListenerId = 'ajgl.security.authentication.session_expiration_listener.' . $name;
+                $sessionExpirationListenerId = 'ajgl.security.authentication.session_expiration_listener.'.$name;
                 $listener = $container->setDefinition($sessionExpirationListenerId, new DefinitionDecorator('ajgl.security.authentication.session_expiration_listener'));
                 $listener->replaceArgument(2, $sessionExpirationConfig['max_idle_time']);
                 $listener->replaceArgument(3, $sessionExpirationConfig['expiration_url']);
