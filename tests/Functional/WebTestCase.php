@@ -14,7 +14,7 @@ namespace Ajgl\Bundle\SessionExpirationBundle\Tests\Functional;
 use Symfony\Bundle\SecurityBundle\Tests\Functional\WebTestCase as BaseTestCase;
 
 /**
- * Description of WebTestCase
+ * Description of WebTestCase.
  *
  * @author Antonio J. García Lagar <aj@garcialagar.es>
  */
